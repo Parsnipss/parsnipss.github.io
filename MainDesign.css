@@ -1,6 +1,42 @@
-body {background-color:black;}
-h1 {color:white;font-family:"Comic Sans MS";text-align:center;}
-h3 {color:#386bb7;font-family:"Comic Sans MS";text-align:center;}
-h5 {color:white;font-family:"Comic Sans MS";text-align:center;}
-a {color:white;font-family:"Comic Sans MS";}
-p {text-align:center;}
+body {
+    background-color:black;
+    
+}
+
+h1 {
+    color:white;
+    font-family:"Comic Sans MS";
+    text-align:center;
+    
+}
+
+h3 {
+    color:#386bb7;
+    font-family:"Comic Sans MS";
+    text-align:center;
+    
+}
+
+h5 {
+    color:white;
+    font-family:"Comic Sans MS";
+    text-align:center;
+    
+    
+}
+
+.cult {
+    text-decoration: line-through;
+    letter-spacing: 10px
+}
+
+a {
+    color:white;
+    font-family:"Comic Sans MS";
+    
+}
+
+p {
+    text-align:center;
+    
+}
