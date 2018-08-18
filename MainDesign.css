@@ -22,16 +22,21 @@ h5 {
     font-family:"Comic Sans MS";
     text-align:center;
     
+}
+
+/* Makes text look creepy */
+.cult {
+    color:Black;
+    text-shadow: 3px 2px #386bb7;
+    text-decoration: line-through underline;
+    letter-spacing: 10px;
+    border: 3px double;
+    border-radius: 10px;
+    background-color: Linen
     
 }
 
-.cult {
-    text-decoration: line-through;
-    letter-spacing: 10px
-}
-
 a {
-    color:white;
     font-family:"Comic Sans MS";
     
 }
@@ -39,4 +44,32 @@ a {
 p {
     text-align:center;
     
+}
+
+/* Link Stylings */
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: #386bb7;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+a:active {
+    color: #386bb7;
+}
+
+.BoxLink {
+    background-color: white;
+    color: black;
+    padding: 14px 25px;
+    margin-left: 350px;
+    margin-right: 350px;
+    text-align: center;
+    text-decoration: none;
+    display:block;
 }
