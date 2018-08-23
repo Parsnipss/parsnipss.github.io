@@ -3,6 +3,11 @@ body {
     
 }
 
+div { 
+    color:white;
+    font-family:"Comic Sans MS";
+}
+
 h1 {
     color:white;
     font-family:"Comic Sans MS";
@@ -28,7 +33,6 @@ h5 {
 .cult {
     color:Black;
     text-shadow: 3px 2px #386bb7;
-    text-decoration: line-through underline;
     letter-spacing: 10px;
     border: 3px double;
     border-radius: 10px;
@@ -49,6 +53,7 @@ p {
 /* Link Stylings */
 a:link {
     color: white;
+    text-decoration: none;
 }
 
 a:visited {
@@ -61,15 +66,4 @@ a:hover {
 
 a:active {
     color: #386bb7;
-}
-
-.BoxLink {
-    background-color: white;
-    color: black;
-    padding: 14px 25px;
-    margin-left: 350px;
-    margin-right: 350px;
-    text-align: center;
-    text-decoration: none;
-    display:block;
 }
