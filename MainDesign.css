@@ -41,12 +41,7 @@ h5 {
 }
 
 .salmon {
-    text-shadow: 2px 2px #e9967a
-}
-
-a {
-    font-family:"Comic Sans MS";
-    
+    text-shadow: 2px 2px #e9967a;
 }
 
 p {
@@ -55,6 +50,10 @@ p {
 }
 
 /* Link Stylings */
+a {
+    font-family:"Comic Sans MS";
+}
+
 a:link {
     color: white;
     text-decoration: none;
@@ -65,7 +64,7 @@ a:visited {
 }
 
 a:hover {
-    color: hotpink;
+    color: #e9967a;
 }
 
 a:active {
