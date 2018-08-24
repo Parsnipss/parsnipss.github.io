@@ -8,6 +8,11 @@ div {
     font-family:"Comic Sans MS";
 }
 
+p {
+    text-align:center;
+    
+}
+
 h1 {
     color:white;
     font-family:"Comic Sans MS";
@@ -42,11 +47,6 @@ h5 {
 
 .salmon {
     text-shadow: 2px 2px #e9967a;
-}
-
-p {
-    text-align:center;
-    
 }
 
 /* Link Stylings */
