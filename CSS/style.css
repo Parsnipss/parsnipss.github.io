@@ -35,6 +35,10 @@ ul{
     margin-bottom: 10px;
 }
 
+.null {
+    display: none;
+}
+
 /* Header */
 header {
     background:#3678e2;
@@ -80,7 +84,7 @@ header .highlight, header .current a{
 
 header a:hover {
     color: #FA8072;
-    text-decoration: line-through;
+    font-weight: lighter;
 }
 
 /*Showcase*/
@@ -89,7 +93,11 @@ header a:hover {
     background:url("../img/showcase.jpg") repeat 50% 50%; /* BROKEN */
     text-align: center;
     color: #fa8072;
-    text-shadow: #3678e2 2px 2px;
+    text-shadow: #3678e2 -5px 2px;
+}
+
+#flavor-showcase {
+    text-shadow: #3678e2 -2px 2px;
 }
 
 #showcase {
@@ -102,13 +110,13 @@ header a:hover {
     font-size: 20px;
 }
 
+/* Newsletter */
+
 #newsletter {
     padding:15px;
     color: #ffffff;
     /*Add background color if things break*/
 }
-
-/* Newsletter */
 
 #newsletter h1 {
     float: left;
@@ -244,3 +252,5 @@ header {
     margin-bottom: 5px;
     }
 }
+
+/* End of Media Query */
