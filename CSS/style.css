@@ -7,15 +7,15 @@ body {
 }
 
 /* Global */
-.container{
-    width:80%;
-    margin: auto;
-    overflow:hidden;
-}
-
 ul{
     margin:0;
     padding:0;
+}
+
+.container {
+    width:80%;
+    margin: auto;
+    overflow:hidden;
 }
 
 .button_1 {
@@ -90,13 +90,13 @@ header a:hover {
 /*Showcase*/
 #showcase {
     min-height: 400px;
-    background:url("../img/showcase.jpg") repeat 50% 50%; /* BROKEN */
+    background:url("../img/showcase.jpg") repeat 50% 50%;
     text-align: center;
     color: #fa8072;
     text-shadow: #3678e2 -5px 2px;
 }
 
-#flavor-showcase {
+#showcase-flavor {
     text-shadow: #3678e2 -2px 2px;
 }
 
