@@ -53,14 +53,14 @@ header a{
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
-    
+
 }
 
 header li{
     float: left;
     display: inline;
     padding: 0 20px 0 20px;
-    
+
 }
 
 header #branding{
@@ -69,7 +69,7 @@ header #branding{
 
 header #branding h1{
     margin:0;
-    
+
 }
 
 header nav{
@@ -121,7 +121,7 @@ header a:hover {
 #newsletter h1 {
     float: left;
     text-shadow: #3678e2 2px 2px;
-    
+
 }
 
 #newsletter form {
@@ -147,7 +147,7 @@ header a:hover {
     color:#ffffff;
     width: 30%;
     padding:10px;
-    
+
 }
 
 #boxes .box img{
@@ -230,7 +230,7 @@ footer{
         float: none;
         text-align: center;
         width: 100%;
-        
+
     }
 
 
