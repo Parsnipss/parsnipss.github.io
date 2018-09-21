@@ -39,6 +39,28 @@ ul{
     display: none;
 }
 
+.outline {
+	text-shadow:
+		-1px -1px 0 #3678e2,
+		1px -1px 0 #3678e2,
+		-1px 1px 0 #3678e2,
+		1px 1px 0 #3678e2;
+}
+
+.whitelink {
+    color: #FA8072;
+    text-decoration: none;
+}
+
+.whitelink:hover {
+    color: #FA8072;
+    text-shadow:
+        -1px -1px 0 #3678e2,
+		1px -1px 0 #3678e2,
+		-1px 1px 0 #3678e2,
+		1px 1px 0 #3678e2;;
+}
+
 /* Header */
 header {
     background:#3678e2;
@@ -160,7 +182,7 @@ header a:hover {
 }
 
 #boxes a:hover {
-    color: #3678e2;
+    color: #FA8072;
 }
 
 #boxes img {
@@ -226,7 +248,7 @@ footer{
     #newsletter form,
     #boxes .box,
     #main-col,
-    #sidebar{
+    #sidebar {
         float: none;
         text-align: center;
         width: 100%;
