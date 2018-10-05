@@ -1,8 +1,14 @@
-import time
+"""
+A simple story about Gordon Ramsay desiring an omellete.
+Colorama is required for the full visual appeal of the game ("pip install colorama")
+Simply type a response to play! You'll have to conform the the availible options though.
+CREDITS: Grace Pak, Gavin Ceballos
+"""
 
-#Components for colored text
+import time
 from colorama import Fore, Back, Style, init
 
+#For Colorama
 init()
 
 #Game is not ending until this value is True.
@@ -24,7 +30,7 @@ def firstChoice():
         lavaMonkey()
     elif choice == "Premium" or choice == "premium":    #See "Premium Route"
         waterSlide()
-    else:   #The Catch
+    else:   #Returns bad input
         print(Fore.MAGENTA, Back.WHITE + "You look around, but do not see a store by that name." + Style.RESET_ALL)
         time.sleep(1)
         firstChoice()
@@ -40,7 +46,7 @@ def lavaMonkey():
         loseSpoon()
     elif weapon == "Fork" or weapon == "fork": #Win choice
         fightGrandma()
-    else:
+    else:   #Returns bad input
         print(Fore.MAGENTA, Back.WHITE + "That is not a Fork or a Spoon." + Style.RESET_ALL)
         time.sleep(1)
         lavaMonkey()
@@ -58,7 +64,7 @@ def loseSpoon():
     elif exit == "No" or exit == "no": #HOLD
         print ("Fine, then you can sit here.")
         input()
-    else:    
+    else:   #Returns bad input    
         print(Fore.MAGENTA, Back.WHITE + "I'm going to assume that means you want to leave." + Style.RESET_ALL)
         time.sleep(3)
         gameExit = True
@@ -74,7 +80,7 @@ def fightGrandma():
         valueEggs()
     elif fight == "No" or fight == "no": #Lose Choice
         loseGrandma()
-    else:
+    else:   #Returns bad input
         print(Fore.MAGENTA, Back.WHITE + "Please answer either Yes or No or you cannot go on." + Style.RESET_ALL)
         time.sleep(1)
         fightGrandma()
@@ -92,7 +98,7 @@ def loseGrandma():
     elif exit == "No" or exit == "no": #HOLD
         print ("Fine, then you can sit here.")
         input()
-    else:    
+    else:   #Returns bad input    
         print(Fore.MAGENTA, Back.WHITE + "I'm going to assume that means you want to leave." + Style.RESET_ALL)
         time.sleep(3)
         gameExit = True
@@ -111,7 +117,7 @@ def valueEggs():
     elif exit == "No" or exit == "no": #HOLD
         print ("Fine, then you can sit here.")
         input()
-    else:    
+    else:   #Returns bad input    
         print(Fore.MAGENTA, Back.WHITE + "I'm going to assume that means you want to leave." + Style.RESET_ALL)
         time.sleep(3)
         gameExit = True
@@ -129,7 +135,7 @@ def waterSlide():
         butter()
     elif slide == "Run" or slide == "run": #Lose Choice
         run()
-    else:
+    else:   #Returns bad input
         print(Fore.MAGENTA, Back.WHITE + "Gordon's inability to decide will get him nowhere!" + Style.RESET_ALL)
         time.sleep(1)
         waterSlide()
@@ -145,7 +151,7 @@ def butter():
         yesSteal()
     elif steal == "No" or steal == "no": #Lose Choice
         noSteal()
-    else:
+    else:   #Returns bad input
         print(Fore.MAGENTA, Back.WHITE + "Please say either Yes or No if you want to go on." + Style.RESET_ALL)
         time.sleep(1)
         butter()
@@ -164,7 +170,7 @@ def run():
     elif exit == "No" or exit == "no": #HOLD
         print ("Fine, then you can sit here.")
         input()
-    else:    
+    else:   #Returns bad input    
         print(Fore.MAGENTA, Back.WHITE + "I'm going to assume that means you want to leave." + Style.RESET_ALL)
         time.sleep(3)
         gameExit = True
@@ -184,7 +190,7 @@ def yesSteal():
     elif exit == "No" or exit == "no": #HOLD
         print ("Fine, then you can sit here.")
         input()
-    else:    
+    else:   #Returns bad input    
         print(Fore.MAGENTA, Back.WHITE + "I'm going to assume that means you want to leave." + Style.RESET_ALL)
         time.sleep(3)
         gameExit = True
@@ -202,7 +208,7 @@ def noSteal():
     elif exit == "No" or exit == "no": #HOLD
         print ("Fine, then you can sit here.")
         input()
-    else:    
+    else:   #Returns bad input    
         print(Fore.MAGENTA, Back.WHITE + "I'm going to assume that means you want to leave." + Style.RESET_ALL)
         time.sleep(3)
         gameExit = True
