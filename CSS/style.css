@@ -33,6 +33,7 @@ ul{
     background: #ffffff;
     margin-top: 10px;
     margin-bottom: 10px;
+    text-align: center
 }
 
 .null {
@@ -212,6 +213,7 @@ aside#sidebar .yote input, aside#sidebar .yote textarea{
     float: left;
     width: 65%;
     color: #ffffff;
+    text-align: center
 }
 
 #main-col h1{
