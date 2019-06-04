@@ -1,0 +1,164 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Processing Demo</title>
+<script type="text/javascript" src="js/shoop.js"></script>
+</head>
+<body>
+<script type="text/processing">
+    /*
+  Author: Gavin Ceballos
+  Version: 1.0604
+*/
+
+PImage bg;
+PImage man;
+PImage cat;
+PImage manF;
+PImage lose;
+PImage start;
+int x;
+int startpos = 50;
+int numCats = 6;
+int count;
+int cx;
+int cy;
+int[] kx = new int[numCats];
+int[] ky = new int[numCats];
+int score;
+int highScore;
+int gameState = 2;
+int center = 300;
+int but_w = 100;
+int but_h = 50;
+int vy = 1;
+boolean flying = false;
+
+
+
+void setup(){
+ size(600,600);
+ bg = loadImage("./img/bgY.png");
+ man = loadImage("./img/fishMan.png");
+ manF = loadImage("./img/fish2.png");
+ cat = loadImage("./img/cat.png");
+ lose = loadImage("./img/loseScreen.png");
+ start = loadImage("./img/startScreen.png");
+ //fx = width + 10000;
+ cy = 100;
+ cx = 50;
+ for(int i =0; i < numCats ; i++){
+    kx[i] = width + (int)random(50, 200) + 200*i;
+    ky[i] = height/2 + (int)random(-200,200);
+  }
+}
+
+void draw(){
+  //background goes on top
+  count++;
+  if (gameState == 0){
+    numCats = 6;
+    image(bg,x,0);
+    image(bg,x+bg.width-2,0);
+    if(x<-(bg.width)){
+      x=0; 
+    }
+    
+    fill(0,0,0);
+    textSize(64);
+    text("Score: "+score, 151, center-8);
+    textSize(12);
+    text("High Score: " + highScore, 0, 12);
+    if(score > highScore){
+      highScore = score; 
+    }
+    if (vy > 0){
+      flying = false;
+    } else {
+      flying = true;
+    }
+    if (flying == false) {
+      image(man,cx,cy);
+    } else {
+      image(manF,cx,cy); 
+    }
+    x--;
+    cy = cy + vy;
+    if (count%2 == 0){
+      vy ++; 
+    }
+    accelerate();
+    checkfish();
+    
+    //Cats on Screen
+    for(int i = 0; i<numCats ; i++){
+      kx[i]-= 2;
+      if(kx[i] < -10){
+        score++;
+        kx[i] = width + (int)random(50, 200);
+        ky[i] = height/2 + (int)random(-200,200);
+      }
+      if(abs((int)((cx-50)-(kx[i]-27))) < 74 && abs((int)((cy-19) - (ky[i]-19))) < 51){
+        gameState=1;
+      }
+      image(cat, kx[i], ky[i]);
+    }
+  }
+  
+  else if (gameState == 1){ //Lose Screen and Reset
+    numCats = 0;
+    score = 0;
+    image(lose,0,0);
+    //begin button
+    fill(255,0,0);
+    if (mouseX < 460 && mouseX > 150 && mouseY < 300 && mouseY > 236){
+      fill(0,0,255); 
+    }
+    rect(150,center-64,325,64,8);
+    fill(0, 0, 0);
+    if (mouseX < 460 && mouseX > 150 && mouseY < 300 && mouseY > 236){
+      fill(0,203,201);
+      if(mousePressed){
+        cy = 100;
+        gameState = 0;
+      }
+    }
+    textSize(12);
+    text("High Score: " + highScore, 0, 12);
+    textSize(64);
+    text("YOU LOSE", 151, center-8);
+  }
+  else if (gameState == 2){ //Start Screen
+    image(start,0,0);
+    fill(0,255,0);
+    if (mouseX < 500 && mouseX > 100 && mouseY < 309 && mouseY > 245){
+      fill(255,255,255);
+      if (mousePressed){
+        gameState = 0; 
+      }
+    }
+    rect(100, center-55, 400, 64,8);
+    fill(255, 0, 255);
+    if (mouseX < 460 && mouseX > 150 && mouseY < 300 && mouseY > 236){
+      fill(0,0,0); 
+    }
+    textSize(64);
+    text("Click to start", 100, center); 
+  }
+}
+
+void accelerate(){
+  if(mousePressed){
+     vy = -7; // makes it go up
+  }
+}
+
+void checkfish(){ //Checks for wall violation
+  if (cy >= 600-(39/2) || cy <= 0){
+    gameState = 1;
+  }
+}
+</script>
+<canvas id="sketch" style="border: 1px solid black;"></canvas>
+</body>
+</html>
