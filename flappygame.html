@@ -98,7 +98,7 @@ void draw(){
         kx[i] = width + (int)random(50, 200);
         ky[i] = height/2 + (int)random(-200,200);
       }
-      if(abs((int)((cx-50)-(kx[i]-27))) < 74 && abs((int)((cy-19) - (ky[i]-19))) < 51){
+      if(abs((int)((cx+50)-(kx[i]+27))) < 74 && abs((int)((cy+19) - (ky[i]+19))) < 51){
         gameState=1;
       }
       image(cat, kx[i], ky[i]);
